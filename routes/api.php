@@ -9,6 +9,9 @@ Route::get('/events', [EventController::class, 'index']);
 // Create
 Route::post('/events', [EventController::class, 'store']);
 
+// Show
+Route::get('/events/{id}', [EventController::class, 'show']);
+
 // Update
 Route::put('/events/{id}', [EventController::class, 'update']);
 

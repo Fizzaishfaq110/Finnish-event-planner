@@ -8,11 +8,30 @@
         "id": 1
     },
     {
-        "title": "vfdbb",
-        "date": "2025-05-30",
-        "location": "dsfdbg",
-        "description": "fdasgdhn",
+        "name": "Juha",
+        "date": "2025-06-13",
+        "time": "13:24",
+        "location": "Hell Sinki",
+        "weather": null,
         "image_url": null,
-        "id": 2
+        "host": {
+            "name": null,
+            "imgUrl": null
+        },
+        "id": 3
+    },
+    {
+        "name": "Juha",
+        "date": "2025-06-13",
+        "time": "13:34",
+        "location": "Hell Sinki",
+        "weather": null,
+        "image_url": null,
+        "description": "this shit is for testing purposes onlu",
+        "host": {
+            "name": null,
+            "imgUrl": null
+        },
+        "id": 4
     }
 ]

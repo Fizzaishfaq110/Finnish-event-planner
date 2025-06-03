@@ -24,11 +24,14 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'date' => 'required|date|after_or_equal:today',
+            'time' => 'required|string',
             'location' => 'required|string|max:255',
-            'description' => 'required|string',
+            'weather' => 'nullable|string',
+            'host' => 'nullable|array',
             'image_url' => 'nullable|url',
+
         ]);
 
         if ($validator->fails()) {
@@ -47,13 +50,33 @@ class EventController extends Controller
         return response()->json($newEvent, 201);
     }
 
+
+    //show single event?
+
+    public function show($id)
+    {
+        $events = $this->readEvents();
+
+        foreach ($events as $event) {
+            if ($event['id'] == $id) {
+                return response()->json($event);
+            }
+        }
+
+        return response()->json(['message' => 'Event not found'], 404);
+    }
+
+
     // Update existing event by id
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'date' => 'required|date|after_or_equal:today',
+            'time' => 'required|string',
             'location' => 'required|string|max:255',
+            'weather' => 'nullable|string',
+            'host' => 'nullable|array',
             'description' => 'required|string',
             'image_url' => 'nullable|url',
         ]);

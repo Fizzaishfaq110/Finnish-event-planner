@@ -1,0 +1,93 @@
+/* Container for the entire event page */
+.event-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Top image */
+.event-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Main content layout */
+.event-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event-description {
+    color: black;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Left section: text info */
+.event-details {
+    flex: 2;
+}
+
+/* Right section: sidebar */
+.event-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Box style for map and host */
+.event-map,
+.event-host {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Host avatar */
+.event-host img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Host container */
+.event-host {
+    display: flex;
+    align-items: center;
+}
+
+/* Buttons */
+.event-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.event-actions button:first-child {
+    background-color: #eee;
+}
+
+.event-actions button:last-child {
+    background-color: #d9534f;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .event-content {
+        flex-direction: row;
+    }
+}
